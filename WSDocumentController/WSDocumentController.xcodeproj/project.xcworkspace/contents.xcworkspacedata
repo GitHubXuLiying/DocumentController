@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DocumentController.xcodeproj">
+      location = "self:WSDocumentController.xcodeproj">
    </FileRef>
 </Workspace>

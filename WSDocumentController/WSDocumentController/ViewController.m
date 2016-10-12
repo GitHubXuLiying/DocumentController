@@ -27,13 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    //初始化文档交互
-    //准备文档的Url
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"haha.pdf" withExtension:nil];
-    
-    _documentController = [UIDocumentInteractionController interactionControllerWithURL:url];
-    [_documentController setDelegate:self];
- 
     
     NSArray *btnTitleArr = @[@"预览",@"其他应用打开"];
     for (NSInteger i = 0; i<2; i++) {
@@ -52,8 +45,8 @@
         }
         
     }
-
-
+    
+    
     
 }
 
@@ -65,6 +58,12 @@
 
 //预览
 - (void)previewClick:(UIButton *)btn {
+    //初始化文档交互
+    //准备文档的Url
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"haha.pdf" withExtension:nil];
+    
+    _documentController = [UIDocumentInteractionController interactionControllerWithURL:url];
+    [_documentController setDelegate:self];
     
     //当前APP打开  需实现协议方法才可以完成预览功能
     [_documentController presentPreviewAnimated:YES];
@@ -73,6 +72,13 @@
 
 //第三方打开 手机中安装有可以打开此格式的软件都可以打开
 - (void)openClick:(UIButton *)btn {
+    
+    //初始化文档交互
+    //准备文档的Url
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"haha.pdf" withExtension:nil];
+    
+    _documentController = [UIDocumentInteractionController interactionControllerWithURL:url];
+    [_documentController setDelegate:self];
     
     [_documentController presentOpenInMenuFromRect:btn.frame inView:self.view animated:YES];
     

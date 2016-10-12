@@ -1,6 +1,6 @@
 //
 //  main.m
-//  DocumentController
+//  WSDocumentController
 //
 //  Created by iMac on 16/10/12.
 //  Copyright © 2016年 zws. All rights reserved.
